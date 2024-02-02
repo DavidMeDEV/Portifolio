@@ -182,7 +182,7 @@ html::-webkit-scrollbar {
 }
 
 .circle {
-    background-image: url("/307234181_1114255719197469_6740733230483525734_n.jpg");
+    background-image: url("./307234181_1114255719197469_6740733230483525734_n.jpg");
     box-shadow: 0px 0px 18px 5px rgba(102, 7, 115, 1), 0px 0px 18px 12px rgba(0, 0, 0, 1);
     background-size: cover;
     width: 13.625rem;
