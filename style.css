@@ -1,0 +1,194 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css);
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 5rem;
+}
+
+html::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    display: none;
+}
+
+.commonText {
+    color: #fff;
+    text-align: justify;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-image: url('Aulinha INFO2.png');
+    background-size: 199.5rem;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.headerButtons {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cabecalho {
+    display: flex;
+    background-color: #140014;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 1rem;
+    z-index: 100;
+}
+
+.cabecalho__div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 15rem;
+    animation: fadeInLeft;
+    animation-duration: 1.2s;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.main {
+    padding-bottom: 5.25;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.Entrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(20, 0, 20, 0.72);
+    width: 70rem;
+    height: 20rem;
+    border: 0.15rem solid #140014;
+    border-radius: 200rem;
+    margin-top: 9rem;
+    animation: fadeInLeft;
+    animation-duration: 1.5s;
+    margin-bottom: 8.5rem;
+}
+
+.projetosContainer {
+    animation: fadeInLeft;
+    animation-duration: 1.2s;
+    display: flex;
+    align-items: center;
+    display: block;
+    flex-direction: column;
+    width: 55.87rem;
+    height: 25rem;
+    background-color: rgba(20, 0, 20, 0.72);
+    border: 0.15rem solid #140014;
+    border-radius: 2rem;
+    /* margin-bottom: 8rem; */
+    margin-bottom: 8.5rem;
+    padding-bottom: 2rem;
+}
+
+/* Carousel */
+.galery {
+    /* border: #140014 solid; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 35.3rem;
+    padding-left: 17.7rem;
+    display: flex;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: auto;
+    margin-left: 1.8rem;
+}
+
+.galery::-webkit-scrollbar {
+    display: none;
+}
+
+.projetos {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.item {
+    border-radius: 10px;
+    width: 213px;
+    height: 250px;
+    opacity: 0.3;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+}
+
+.current_item {
+    opacity: 1;
+}
+
+.esquerda,
+.direita {
+    z-index: 10;
+    position: relative;
+    top: 9.5rem;
+    background: linear-gradient(225deg, #26528C, #660773);
+    color: #fff;
+    width: 3rem;
+    height: 3rem;
+    border: #140014 solid 0.15px;
+    border-radius: 100px;
+    transition: transform 600ms ease-in-out
+}
+
+.esquerda:hover,
+.direita:hover {
+    transform: scale(1.1);
+}
+
+.direita {
+
+    left: 51.8rem;
+}
+
+.esquerda {
+    right: 1.5rem;
+}
+
+.descricao {
+    /* border: #140014 solid 3px; */
+    text-align: center;
+    color: #fff;
+}
+
+/* About Me Section */
+
+.aboutMe {
+    margin-top: 5rem;
+    animation: fadeInLeft;
+    animation-duration: 1.2s;
+    display: flex;
+    width: 55.87rem;
+    height: 25rem;
+    background-color: rgba(20, 0, 20, 0.72);
+    border: 0.15rem solid #140014;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.circle {
+    background-image: url("/307234181_1114255719197469_6740733230483525734_n.jpg");
+    box-shadow: 0px 0px 18px 5px rgba(102, 7, 115, 1), 0px 0px 18px 12px rgba(0, 0, 0, 1);
+    background-size: cover;
+    width: 13.625rem;
+    height: 13.625rem;
+    align-items: center;
+    position: relative;
+    bottom: 90px;
+    border-radius: 50%;
+}

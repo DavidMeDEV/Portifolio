@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <title>Portifólio</title>
+</head>
+
+<body id="inicio" class="container">
+    <header class="cabecalho">
+        <div class="cabecalho__div">
+            <a class="headerButtons" href="#inicio">Início</a>
+            <a class="headerButtons" href="#projetos">Projetos</a>
+            <a class="headerButtons" href="#sobreMim">Sobre mim</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="Entrada">
+            <h1 class="commonText">Bem-Vindo ao meu Portifólio!</h1>
+            <p class="commonText">Olá! Meu nome é David, desenvolvedor WEB e Mobile!</p>
+        </div>
+        <div id="projetos" class="projetosContainer">
+            <button class="esquerda controle" aria-label="prev" onclick="swTitles()">◀</button>
+            <button class="direita controle" aria-label="next">▶</button>
+            <div class="galery">
+                <div class="projetos">
+                    <img src="https://source.unsplash.com/random/250x250/?beach" alt="Beach Image"
+                        class="item current_item">
+                    <img src="https://source.unsplash.com/random/250x250/?animal" alt="Animal Image"
+                        class="item current_item">
+                    <img src="https://source.unsplash.com/random/250x250/?street" alt="Street Image"
+                        class="item current_item">
+                    <img src="https://source.unsplash.com/random/250x250/?zoo" alt="Zoo Image"
+                        class="item current_item">
+                    <img src="https://source.unsplash.com/random/250x250/?model" alt="Model Image"
+                        class="item current_item">
+                </div>
+            </div>
+            <div class="descricao">
+                <h1 class="project_Title" id="project_Title">Projetos </h1>
+                <p class="project_Description" id="project_Description"></p>
+            </div>
+
+        </div>
+        <div class="aboutMe">
+            <div class="circle" id="sobreMim">
+
+            </div>
+            <h1 class="aboutMe_title">ola</h1>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+
+        </div>
+    </footer>
+</body>
+
+<script src="/script.js"></script>
+
+</html>
