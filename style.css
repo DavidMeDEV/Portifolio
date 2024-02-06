@@ -1,4 +1,5 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -10,15 +11,24 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-.commonText {
+.commonTitle {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
     color: #fff;
     text-align: justify;
+}
+
+.commonText {
+    color: #fff;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    font-size: larger;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    background-image: url('Aulinha INFO2.png');
+    background-image: url('AulinhaINFO2.png');
     background-size: 199.5rem;
     background-repeat: no-repeat;
     margin: 0;
@@ -27,6 +37,7 @@ html::-webkit-scrollbar {
 .headerButtons {
     text-decoration: none;
     color: #fff;
+    font-family: 'Inconsolata', monospace;
 }
 
 .cabecalho {
@@ -51,7 +62,7 @@ html::-webkit-scrollbar {
 }
 
 .main {
-    padding-bottom: 5.25;
+    /* padding-bottom: 5.25; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,6 +116,17 @@ html::-webkit-scrollbar {
     scrollbar-width: none;
     overflow-x: auto;
     margin-left: 1.8rem;
+}
+
+.project_Title {
+    font-family: 'Inconsolata', monospace;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.project_Description {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
 }
 
 .galery::-webkit-scrollbar {
@@ -167,6 +189,7 @@ html::-webkit-scrollbar {
 /* About Me Section */
 
 .aboutMe {
+    flex-direction: column;
     margin-top: 5rem;
     animation: fadeInLeft;
     animation-duration: 1.2s;
@@ -177,12 +200,12 @@ html::-webkit-scrollbar {
     border: 0.15rem solid #140014;
     border-radius: 2rem;
     margin-bottom: 2rem;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .circle {
-    background-image: url("./307234181_1114255719197469_6740733230483525734_n.jpg");
+    background-image: url("./mifoto.jpg");
     box-shadow: 0px 0px 18px 5px rgba(102, 7, 115, 1), 0px 0px 18px 12px rgba(0, 0, 0, 1);
     background-size: cover;
     width: 13.625rem;
@@ -191,4 +214,48 @@ html::-webkit-scrollbar {
     position: relative;
     bottom: 90px;
     border-radius: 50%;
+}
+
+.aboutMe_title {
+    position: relative;
+    bottom: 60px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 300;
+    padding: 1rem;
+}
+
+/* mobile traits */
+
+@media (max-width:600px) {
+    .container {
+        align-items: center;
+        padding-bottom: 1rem;
+        width: 100%;
+        height: 1rem;
+        transform: scale(0.5);
+        background-color: #fff;
+        background-size: 150rem;
+    }
+
+    .cabecalho__div {
+        overflow-x: hidden;
+        background-color: #fff;
+    }
+
+    .cabecalho {
+        overflow-x: hidden;
+        display: flex;
+        width: 75rem;
+    }
+
+    .main {
+        margin-bottom: 1px;
+        padding-bottom: 1px;
+    }
+
+    .aboutMe {
+        margin-bottom: 1rem;
+    }
 }
