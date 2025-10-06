@@ -1,67 +1,566 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" type="text/css">
-    <title>Portifólio</title>
+    <title>Comunicação e Intimidade - Restaure Seu Casamento</title>
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #06E435;
+            color: #000;
+            text-decoration: none;
+            border-radius: 59px;
+            font-weight: 800;
+            font-size: 18px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 25px -1px rgba(0,0,0,0.5);
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #05c42d;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-white {
+            color: #fff;
+        }
+        
+        .bg-blue {
+            background-color: #0041FF;
+        }
+        
+        .bg-dark {
+            background-color: #500909;
+        }
+        
+        .bg-light {
+            background-color: #FFFFFF;
+        }
+        
+        .price-old {
+            text-decoration: line-through;
+            color: #E30000;
+            font-size: 24px;
+        }
+        
+        .price-new {
+            color: #FFFFFF;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .benefits-list {
+            list-style: none;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #AB0364;
+            font-weight: bold;
+        }
+        
+        /* Seções específicas */
+        .hero {
+            background-color: #0041FF;
+            color: white;
+            padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hero-image {
+            max-width: 400px;
+            margin: 20px 0;
+        }
+        
+        .problems-section {
+            background-color: #500909;
+            color: white;
+        }
+        
+        .problems-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .problem-item {
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .content-section {
+            background-color: #0A000F;
+            color: white;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .content-item {
+            background-color: #964627;
+            padding: 30px 20px;
+            border-radius: 17px;
+            text-align: center;
+        }
+        
+        .content-item:nth-child(even) {
+            background-color: #E1E1E1;
+            color: #000;
+        }
+        
+        .bonus-section {
+            background-color: #FFFFFF;
+            color: #000;
+        }
+        
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .bonus-item {
+            background-color: #F0F0F0;
+            padding: 30px 20px;
+            border-radius: 23px;
+            text-align: center;
+        }
+        
+        .pricing-section {
+            background-color: #FFFFFF;
+            color: #000;
+        }
+        
+        .guarantee-section {
+            background-color: #964627;
+            color: white;
+        }
+        
+        .guarantee-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .guarantee-image {
+            max-width: 300px;
+        }
+        
+        .testimonials-section {
+            background-color: #000000;
+            color: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .testimonial-item {
+            background-color: #FFFFFF;
+            color: #000;
+            padding: 30px;
+            border-radius: 16px;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .faq-section {
+            background-color: #FFFFFF;
+            color: #000;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            display: none;
+            padding-top: 10px;
+        }
+        
+        .footer {
+            background-color: #000000;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 0;
+            }
+            
+            .guarantee-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '538947705753380');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=538947705753380&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
-
-<body id="inicio" class="container">
-    <header class="cabecalho">
-        <div class="cabecalho__div">
-            <a class="headerButtons" href="#inicio">Início</a>
-            <a class="headerButtons" href="#projetos">Projetos</a>
-            <a class="headerButtons" href="#sobreMim">Sobre mim</a>
+<body>
+    <!-- Seção Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="text-center">COMO RESTAURAR O SEU CASAMENTO COM UMA DOSE CERTA DE INTIMIDADE</h1>
+                <p class="text-center">Celebrando o amor e a união, em poucos passos o seu casamento estará firme.</p>
+                <img src="https://comunicacaoeintimidade.space/wp-content/uploads/2024/10/Dramatic-Romance-Book-Cover-2.png" alt="Comunicação e Intimidade - E-book" class="hero-image">
+                <div class="pricing text-center">
+                    <p class="price-old">De R$ 67,00</p>
+                    <p class="price-new">POR APENAS R$ 19,99 HOJE!</p>
+                </div>
+                <a href="https://pay.kirvano.com/010c03b8-bb9b-481f-8550-33e3d2750ca3" class="btn">QUERO RESTAURAR O MEU CASAMENTO</a>
+                <ul class="benefits-list text-white">
+                    <li>Aprenda a se comunicar</li>
+                    <li>Quebre as barreiras do silêncio</li>
+                    <li>Aprenda a ouvir o seu parceiro</li>
+                    <li>Se torne mais romântica</li>
+                    <li>Tornando a sua melhor versão</li>
+                    <li>Fortalecendo os laços juntos</li>
+                    <li>GANHE +2 BÔNUS EXCLUSIVOS</li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <main class="main">
-        <div class="Entrada">
-            <h1 class="commonTitle">Bem-Vindo ao meu Portifólio!</h1>
-            <p class="commonText">Olá! Meu nome é David, desenvolvedor WEB e Mobile!</p>
-        </div>
-        <div id="projetos" class="projetosContainer">
-            <button class="esquerda controle" aria-label="prev" onclick="swTitles()">◀</button>
-            <button class="direita controle" aria-label="next">▶</button>
-            <div class="galery">
-                <div class="projetos">
-                    <img src="https://unsplash.com/pt-br/fotografias/seashore-during-golden-hour-KMn4VEeEPR8" alt="Beach Image"
-                        class="item current_item">
-                    <img src="https://unsplash.com/pt-br/fotografias/brown-fox-on-snow-field-xUUZcpQlqpM" alt="Animal Image"
-                        class="item current_item">
-                    <img src="https://unsplash.com/pt-br/fotografias/uma-rua-movimentada-da-cidade-a-noite-com-placas-de-neon-mGfUD56sh7E" alt="Street Image"
-                        class="item current_item">
-                    <img src="https://unsplash.com/pt-br/fotografias/panda-vermelho-escalando-na-arvore-a9NQ6z1zqro" alt="Zoo Image"
-                        class="item current_item">
-                    <img src="https://unsplash.com/pt-br/fotografias/closeup-photography-of-woman-smiling-mEZ3PoFGs_k" alt="Model Image"
-                        class="item current_item">
+    <!-- Seção de Problemas -->
+    <section class="problems-section">
+        <div class="container">
+            <h2 class="text-center">VOCÊ NÃO MERECE UM CASAMENTO QUEBRADO, CANSADO, E QUE TE ATRASA EM TUDO NA SUA VIDA</h2>
+            <div class="problems-list">
+                <div class="problem-item">
+                    <p>VOCÊS ESTÃO AGINDO MAIS COMO AMIGOS DO QUE COMPANHEIROS?</p>
+                </div>
+                <div class="problem-item">
+                    <p>SENTE QUE EXISTE ALGO QUE PRECISA SER RESOLVIDO?</p>
+                </div>
+                <div class="problem-item">
+                    <p>VOCÊ SENTE QUE O SEU MARIDO ESTÁ DISTANTE?</p>
+                </div>
+                <div class="problem-item">
+                    <p>VOCÊ NÃO SE SENTE DESEJADA?</p>
+                </div>
+                <div class="problem-item">
+                    <p>FALTA APOIO E COMPREENSÃO?</p>
+                </div>
+                <div class="problem-item">
+                    <p>FALTA RESPEITO E AFETO?</p>
+                </div>
+                <div class="problem-item">
+                    <p>VOCÊ SE SENTE INSEGURA?</p>
                 </div>
             </div>
-            <div class="descricao">
-                <h1 class="project_Title" id="project_Title">Projetos </h1>
-                <p class="project_Description" id="project_Description"></p>
+            <div class="text-center" style="margin-top: 40px;">
+                <p><strong>TODOS ESSES PROBLEMAS SÃO COMUNS, MAS NÃO É NORMAL SENTIR ISSO! AFINAL, VOCÊ SE RELACIONA PRA SER FELIZ!</strong></p>
+                <p>É POSSÍVEL COM O GUIA PARA RESTAURAR A HARMONIA, COMUNICAÇÃO E O MELHOR A SUA INTIMIDADE</p>
+                <a href="https://pay.kirvano.com/7cb2264c-f5c6-4b50-bd50-c3c2f7b68c75" class="btn">SIM, QUERO TER UMA VIDA A DOIS FELIZ</a>
             </div>
-
         </div>
-        <div class="aboutMe">
-            <div class="circle" id="sobreMim">
+    </section>
 
+    <!-- Seção de Conteúdo -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="text-center">O QUE VOCÊ VAI APRENDER COM OS 10 MANDAMENTOS DA MULHER DE VALOR:</h2>
+            <div class="content-grid">
+                <div class="content-item">
+                    <p>1 - APRENDER A SER MAIS COMUNICATIVO COM SEU PARCEIRO</p>
+                </div>
+                <div class="content-item">
+                    <p>2 - ATITUDES SIMPLES PARA FAZER VOCÊS SE SENTIREM BEM</p>
+                </div>
+                <div class="content-item">
+                    <p>3 - DESCOBRINDO UMA NOVA RELAÇÃO</p>
+                </div>
+                <div class="content-item">
+                    <p>4 - COMUNICAÇÃO EFICAZ E AFETIVA</p>
+                </div>
+                <div class="content-item">
+                    <p>5 - COMPORTAMENTOS DE UM CASAL MADURO</p>
+                </div>
+                <div class="content-item">
+                    <p>6 - GANHANDO A CONFIANÇA DO PARCEIRO</p>
+                </div>
+                <div class="content-item">
+                    <p>7 - COMO NÃO DEIXAR A CHAMA DO AMOR SE APAGAR</p>
+                </div>
+                <div class="content-item">
+                    <p>8 - CURANDO AS FERIDAS DO RELACIONAMENTO</p>
+                </div>
+                <div class="content-item">
+                    <p>9 - COMO LIDAR COM OS MEDOS</p>
+                </div>
+                <div class="content-item">
+                    <p>10 - COMO RECEBER MAIS CARINHO, AFETO E TEMPO DE QUALIDADE</p>
+                </div>
+                <div class="content-item">
+                    <p>BÔNUS: DICAS E ENSINAMENTOS DO PR. CLÁUDIO DUARTE</p>
+                </div>
             </div>
-            <h1 class="aboutMe_title">E este sou eu. Um fã de tecnologia e estou explorando este vasto
-                universo
-                do desenvolvimeto de sistemas. Meu objetivo é entregar para você uma experiência de outro mundo! </h1>
         </div>
-    </main>
+    </section>
 
-    <footer>
-        <div>
+    <!-- Seção de Bônus -->
+    <section class="bonus-section">
+        <div class="container">
+            <h2 class="text-center">ALÉM DISSO SE INSCREVENDO HOJE VOCÊ VAI RECEBER +4 BÔNUS GRÁTIS!</h2>
+            <div class="bonus-grid">
+                <div class="bonus-item">
+                    <h3>Bônus 1 - Dicas para evitar desgastes no casamento</h3>
+                    <p>Aprenda a como evitar desgastes desnecessários no seu casamento!</p>
+                </div>
+                <div class="bonus-item">
+                    <h3>Bônus 2 - E-BOOK: Fé e Casamento</h3>
+                    <p>Concilie a Fé no seu casamento e você verá grandes coisas acontecendo em suas vidas!</p>
+                </div>
+                <div class="bonus-item">
+                    <h3>Bônus 3 - Bônus surpresa</h3>
+                    <p>Ganhe um bônus (um dos livros mais vendidos do mercado).</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Seção de Preços -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="text-center">
+                <p>O valor de todo esse conteúdo poderia facilmente custar mais de R$500,00 e ainda sim seria barato. Mas você não vai investir nem perto disso.</p>
+                <p>Hoje você terá acesso ao e-book Comunicação e intimidade +3 Bônus EXCLUSIVOS pelo valor promocional de Lançamento</p>
+                <p class="price-old">De R$ 97,00</p>
+                <h2>Por apenas R$ 29,90</h2>
+                <p>Com menos de uma pizza você tem acesso ao guia que irá transformar o seu relacionamento.</p>
+                <a href="https://pay.kirvano.com/7cb2264c-f5c6-4b50-bd50-c3c2f7b68c75" class="btn">SIM, QUERO O MATERIAL COM DESCONTO!</a>
+                <p><strong style="color: #ff0000;">ATENÇÃO:</strong> As vagas com esse valor serão LIMITADAS e logo logo o preço irá aumentar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Garantia -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content">
+                <div>
+                    <img src="https://comunicacaoeintimidade.space/wp-content/uploads/2024/10/garantia-30-dias-1024x640-1.png" alt="Garantia de 30 dias" class="guarantee-image">
+                </div>
+                <div>
+                    <h2>GARANTIA DE 30 DIAS</h2>
+                    <p>Mais um Incentivo Para Provar que os 10 Mandamentos da Mulher de Valor é Para Você!</p>
+                    <p>VOCÊ TEM 30 DIAS DE GARANTIA INCONDICIONAL!</p>
+                    <p>Se por algum motivo você achar que o conteúdo não é pra você, basta me mandar um único e-mail para falcaolincoln005@gmail.com que devolvo todo o seu dinheiro na mesma hora.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="text-center">O QUE NOSSAS CLIENTES ESTÃO FALANDO</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-header">
+                        <img src="https://comunicacaoeintimidade.space/wp-content/uploads/2024/10/generated-image-tm9irc.jpg" alt="Carmelita Inês" class="testimonial-avatar">
+                        <div>
+                            <h4>Carmelita Inês</h4>
+                            <p>Responder · Curtir · Seguir · 5d</p>
+                        </div>
+                    </div>
+                    <p>O livro comunicação e intimidade transformou minha vida! Os ensinamentos inspirados na Bíblia me ajudaram a restaurar o meu casamento.</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-header">
+                        <img src="https://comunicacaoeintimidade.space/wp-content/uploads/2024/10/generated-image-fo4fsa.jpg" alt="Fernanda Almeida" class="testimonial-avatar">
+                        <div>
+                            <h4>Fernanda Almeida</h4>
+                            <p>Responder · Curtir · Seguir · 4d</p>
+                        </div>
+                    </div>
+                    <p>Esse material me ajudou a ter mais intimidade com meu parceiro! Meu marido me procura mais agora.</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-header">
+                        <img src="https://comunicacaoeintimidade.space/wp-content/uploads/2024/10/generated-image-7h2t1e.jpg" alt="Raimunda Pereira" class="testimonial-avatar">
+                        <div>
+                            <h4>Raimunda Pereira</h4>
+                            <p>Responder · Curtir · Seguir · 1h</p>
+                        </div>
+                    </div>
+                    <p>Estou simplesmente encantada com esse guia. Agradeço por esse recurso incrível que está impactando meu casamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="text-center">PERGUNTAS FREQUENTES</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>COMO VOU ACESSAR O GUIA COMUNICAÇÃO E INTIMIDADE?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O seu acesso será pela plataforma Kirvano, após a compra você receberá diretamente em seu email o link para acessar tudo pelo seu celular, computador ou tablet. Além disso, você pode imprimir todo o material.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>E SE EU NÃO GOSTAR?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Todas as mulheres que adquiriram estão satisfeitas com os Mandamentos, mas se por algum motivo você não gostar, basta pedir reembolso de forma fácil e rápido.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <h3>PARA VOCÊ CHEGOU ATÉ AQUI: ESSA É A SUA CHANCE DE NÃO PERDER SEU CASAMENTO POR FALTA DE COMUNICAÇÃO!</h3>
+                <a href="https://pay.kirvano.com/7cb2264c-f5c6-4b50-bd50-c3c2f7b68c75" class="btn">CLIQUE PARA SAIR DA INDECISÃO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright 2023 – Todos os Direitos Reservados | Política de Privacidade</p>
         </div>
     </footer>
+
+    <script>
+        // Script para FAQ
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                
+                // Fecha todas as respostas
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                
+                // Abre/fecha a resposta clicada
+                answer.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
-
-<script src="./script.js"></script>
-
 </html>
